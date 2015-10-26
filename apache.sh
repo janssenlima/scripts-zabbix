@@ -1,9 +1,10 @@
 #!/bin/bash
 #######################################################################################################
 # Autor: Janssen dos Reis Lima                                                                        #
-# Data atualizacao: 15/05/2015                                                                        #
+# Data atualizacao: 26/10/2015                                                                        #
 # Changelog:                                                                                          #
 #   - Inclusão de CPULoad após atualização do Apache ter adicionado essa métrica no server-status     #
+#   - Inclusão de verificação da versão do Apache em execução no servidor                             #
 #######################################################################################################
 host="localhost"
 resposta=0
