@@ -90,6 +90,9 @@ case $1 in
       $pega_status
       fgrep "Scoreboard:" $tmp | awk '{print $2}'| awk 'BEGIN { FS = "." } ; { print NF-1 }'
       resposta=$?;;
+    version)
+      /usr/sbin/apachectl -v | grep "version" | cut -f2 -d "/" | awk '{print $1}'
+      resposta=$?;;
    *)
       echo "ZBX_NOTSUPPORTED"
 esac
