@@ -22,7 +22,6 @@ procurar=".*/tcp open .*"
 echo '{"data":['
 
 contador=0
-incremento=1
 
 for linha in $Scan; do
     Tmp=$(echo $linha | sed -e 's/^[[:space:]]*//' | sed -r 's/ +/ /g' | grep $procurar)
@@ -40,7 +39,7 @@ for linha in $Scan; do
         fi
         printf '{"{#PORTA}":"%s", "{#SERVICO}":"%s"}' "$porta" "$servico"
 
-        contador=$(($contador+$incremento))
+        contador=$(($contador+1))
 
     fi
 done
