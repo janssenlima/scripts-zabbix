@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2015-10-27T15:19:10Z</date>
+    <date>2015-10-27T18:02:33Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -9,8 +9,8 @@
     </groups>
     <templates>
         <template>
-            <template>TCP Scan ports LLD</template>
-            <name>TCP Scan ports LLD</name>
+            <template>TCP port scan LLD</template>
+            <name>TCP port scan LLD</name>
             <description/>
             <groups>
                 <group>
@@ -58,7 +58,7 @@
                     <description/>
                     <item_prototypes>
                         <item_prototype>
-                            <name>{#SERVICE} service is running</name>
+                            <name>{#SERVICO} service is running</name>
                             <type>3</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
@@ -105,8 +105,8 @@
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{TCP Scan ports LLD:net.tcp.service[tcp,,{#PORTA}].last(0)}=0</expression>
-                            <name>{#SERVICE} service is down</name>
+                            <expression>{TCP port scan LLD:net.tcp.service[tcp,,{#PORTA}].last(0)}=0</expression>
+                            <name>{#SERVICO} service is down</name>
                             <url/>
                             <status>0</status>
                             <priority>3</priority>
