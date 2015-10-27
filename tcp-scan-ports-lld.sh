@@ -17,7 +17,7 @@ Scan=$(nmap -Pn --open -n $1)
 OldIFS=$IFS
 IFS="
 "
-Pattern=".*/tcp open .*"
+procurar=".*/tcp open .*"
 
 echo '{"data":['
 
@@ -25,13 +25,13 @@ contador=0
 incremento=1
 
 for linha in $Scan; do
-    Tmp=$(echo $linha | sed -e 's/^[[:space:]]*//' | sed -r 's/ +/ /g' | grep $Pattern)
+    Tmp=$(echo $linha | sed -e 's/^[[:space:]]*//' | sed -r 's/ +/ /g' | grep $procurar)
     if [ $? -eq 0 ]; then
         porta=$(echo -n $Tmp | cut -d "/" -f 1 | tr -d "\n")
         servico=$(echo -n $Tmp | cut -d " " -f 3 | tr -d "\n")
 
-        if [ "$Name" = "unknown" ]; then
-            Name="port $Port"
+        if [ "$servico" = "unknown" ]; then
+            Name="port $Porta"
         fi
 
         if [ $contador -gt 0 ]; then
