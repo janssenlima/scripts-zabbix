@@ -29,7 +29,7 @@
                     <type>10</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>tcp-scan-ports-lld.sh[{HOST.CONN}]</key>
+                    <key>tcp-port-scan-lld.sh[{HOST.CONN}]</key>
                     <delay>30</delay>
                     <status>0</status>
                     <allowed_hosts/>
