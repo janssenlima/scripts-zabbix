@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 usage() {
     echo Uso: $0 hostname
@@ -39,7 +39,7 @@ for linha in $Scan; do
         fi
         printf '{"{#PORTA}":"%s", "{#SERVICO}":"%s"}' "$porta" "$servico"
 
-        contador=$(($contador+1))
+        let contador++
 
     fi
 done
