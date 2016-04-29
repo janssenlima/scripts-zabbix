@@ -1,5 +1,5 @@
-# Templates Zabbix
-Scripts para utilização na ferramenta Zabbix
+# Script Zabbix
+Scripts para utilização de monitoramento diversos com o NMS Zabbix
 
 <b>Monitoramento Amazon RDS </b><p>
 Necessário preencher os valores das macros {$AWS_ACCESS_KEY} e {$AWS_SECRET_KEY} dentro da configuração do template.
