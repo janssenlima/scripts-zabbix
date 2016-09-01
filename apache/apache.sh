@@ -1,14 +1,15 @@
 #!/bin/bash
 #######################################################################################################
 # Autor: Janssen dos Reis Lima                                                                        #
-# Data atualizacao: 26/10/2015                                                                        #
+# Data atualizacao: 01/09/2016                                                                        #
 # Changelog:                                                                                          #
+#   - Alteração da variável 'tmp'                                                                     #
 #   - Inclusão de CPULoad após atualização do Apache ter adicionado essa métrica no server-status     #
 #   - Inclusão de verificação da versão do Apache em execução no servidor                             #
 #######################################################################################################
 host="localhost"
 resposta=0
-tmp="/opt/zabbix/tmp/apache_status"
+tmp="/tmp/apache_status"
 pega_status=`wget --quiet -O $tmp http://$host/server-status?auto`
 case $1 in
    TotalAccesses)
